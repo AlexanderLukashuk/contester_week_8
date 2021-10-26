@@ -4,30 +4,27 @@ using namespace std;
 
 void LeftOddRightEven(int *array, int size)
 {
-    int* ptr = array;
+    int* new_array = new int[size];
+    int* ptr = new_array;
+    int* start_ptr = ptr;
 
-    /*int *odd_ptr = array;
-    int *start_ptr = odd_ptr;
+    for (int i = 1; i < size; i += 2)
+    {
+        *ptr = array[i];
+        ptr++;
+    }
+
+    for (int i = 0; i < size; i += 2)
+    {
+        *ptr = array[i];
+        ptr++;
+    }
 
     for (int i = 0; i < size; i++)
     {
-        if (array[i] % 2 == 0)
-        {
-        }
-    }*/
-
-    /*for (int i = 1; i < size; ++i)
-    {
-        for (int r = size - i; r > 0; r--)
-        {
-            if ((array[r] % 2 == 0) && (array[r] < array[r - 1]))
-            {
-                int temp = array[r];
-                array[r] = array[r - 1];
-                array[r - 1] = temp;
-            }
-        }
-    }*/
+        cout << *(start_ptr + i) << " ";
+    }
+    cout << endl;
 }
 
 int main()
