@@ -2,6 +2,20 @@
 
 using namespace std;
 
+template<class T>
+class A
+{
+private:
+    T* data;
+    int size;
+public:
+    void add(T value) 
+    {
+        T* tmp = new T[size + 1];
+        delete[]tmp;
+    }
+};
+
 void LeftOddRightEven(int *array, int size)
 {
     /*int *odd_ptr = array;
