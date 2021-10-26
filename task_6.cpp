@@ -2,22 +2,10 @@
 
 using namespace std;
 
-template<class T>
-class A
-{
-private:
-    T* data;
-    int size;
-public:
-    void add(T value) 
-    {
-        T* tmp = new T[size + 1];
-        delete[]tmp;
-    }
-};
-
 void LeftOddRightEven(int *array, int size)
 {
+    int* ptr = array;
+
     /*int *odd_ptr = array;
     int *start_ptr = odd_ptr;
 
@@ -28,7 +16,7 @@ void LeftOddRightEven(int *array, int size)
         }
     }*/
 
-    for (int i = 1; i < size; ++i)
+    /*for (int i = 1; i < size; ++i)
     {
         for (int r = size - i; r > 0; r--)
         {
@@ -39,13 +27,7 @@ void LeftOddRightEven(int *array, int size)
                 array[r - 1] = temp;
             }
         }
-    }
-
-    for (int i = 0; i < size; i++)
-    {
-        cout << array[i] << " ";
-    }
-    cout << endl;
+    }*/
 }
 
 int main()
